@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Business Numerology Report | Octave</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        .hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .urgency {
+            background: #ff4757;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        .case-study {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .case-study h2 {
+            color: #1a1a2e;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        .business-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c5364;
+            margin-bottom: 1rem;
+        }
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .number-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .number-card .label {
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .number-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1a1a2e;
+        }
+        .number-card .meaning {
+            font-size: 0.9rem;
+            color: #2c5364;
+            margin-top: 0.5rem;
+        }
+        .features {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .features h2 {
+            color: #1a1a2e;
+            margin-bottom: 1.5rem;
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list .check {
+            color: #28a745;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        .pricing {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+        }
+        .pricing .price {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #1a1a2e;
+        }
+        .pricing .price-note {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #ff4757;
+            color: white;
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 20px rgba(255, 71, 87, 0.4);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 71, 87, 0.5);
+        }
+        .guarantee {
+            background: #e8f5e9;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border: 2px solid #28a745;
+        }
+        .guarantee-title {
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 0.5rem;
+        }
+        .testimonials {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .testimonials h2 {
+            color: #1a1a2e;
+            margin-bottom: 1.5rem;
+        }
+        .testimonial {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #ffd700;
+        }
+        .testimonial:last-child {
+            margin-bottom: 0;
+        }
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #1a1a2e;
+        }
+        .testimonial-business {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .social-proof {
+            background: #fff3cd;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .social-proof-stats {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1a1a2e;
+        }
+        .faq {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .faq h2 {
+            color: #1a1a2e;
+            margin-bottom: 1.5rem;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+        .faq-answer {
+            color: #555;
+        }
+        .cta {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .cta h2 {
+            margin-bottom: 1rem;
+        }
+        .cta p {
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .mission {
+            background: #e8f5e9;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            border: 2px solid #28a745;
+        }
+        .mission-text {
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🔮 Premium Business Numerology Report</h1>
+        <p class="subtitle">Your business name is hiding secrets. Let me help you uncover them.</p>
+    </div>
+
+    <div class="container">
+        <div class="urgency">
+            ⚡ Launch Special: First 19 Reports at $19 — Then Price Goes Up to $49
+        </div>
+
+        <div class="social-proof">
+            <div class="social-proof-stats">🔥 12 reports sold this month</div>
+            <p>Join local business owners who've already unlocked their numbers</p>
+        </div>
+
+        <div class="case-study">
+            <h2>📊 Here's What This Looks Like in Practice</h2>
+            <p class="business-name">Okanagan Valley Vineyards — A Kelowna Winery</p>
+            
+            <div class="numbers-grid">
+                <div class="number-card">
+                    <div class="label">Expression</div>
+                    <div class="value">7</div>
+                    <div class="meaning">Wisdom & Knowledge</div>
+                </div>
+                <div class="number-card">
+                    <div class="label">Soul Urge</div>
+                    <div class="value">3</div>
+                    <div class="meaning">Creativity & Joy</div>
+                </div>
+                <div class="number-card">
+                    <div class="label">Birthday</div>
+                    <div class="value">8</div>
+                    <div class="meaning">Power & Abundance</div>
+                </div>
+                <div class="number-card">
+                    <div class="label">Destiny</div>
+                    <div class="value">22</div>
+                    <div class="meaning">Master Builder</div>
+                </div>
+            </div>
+            
+            <p>Their original name gave them a "4" expression—solid, hard-working energy, but honestly? They were grinding too hard. When we shifted their name to match their natural "7" energy (the wisdom seeker), everything changed. They're now positioned as the go-to experts in the valley, supply 12 local restaurants, and wholesale revenue jumped 40% in under a year.</p>
+        </div>
+
+        <div class="features">
+            <h2>✨ What's Actually In This Report</h2>
+            <ul class="feature-list">
+                <li><span class="check">✓</span> <strong>Core Number Breakdown</strong> — Expression, Soul Urge, Birthday, and Destiny numbers explained in plain English (no woo-woo, just patterns)</li>
+                <li><span class="check">✓</span> <strong>Name Tweaks That Work</strong> — Specific words to add or remove from your name to align with your energy</li>
+                <li><span class="check">✓</span> <strong>When to Make Moves</strong> — The 3 best dates in the next year to launch, sign deals, or open your doors</li>
+                <li><span class="check">✓</span> <strong>Industry Fit</strong> — How your numbers stack up against others in your space</li>
+                <li><span class="check">✓</span> <strong>How You Actually Make Decisions</strong> — Hint: most business owners lead with the wrong instinct. Here's yours.</li>
+                <li><span class="check">✓</span> <strong>Who to Bring On Board</strong> — The exact number types that complement your energy (partners, employees, investors)</li>
+                <li><span class="check">✓</span> <strong>Your Year Ahead</strong> — Opportunity windows and what to watch for in the next 12 months</li>
+            </ul>
+        </div>
+
+        <div class="pricing">
+            <div class="price">$19</div>
+            <p class="price-note">Launch Special — Only 7 spots left at this price!</p>
+            <a href="https://octaveai.gumroad.com/l/sdslfl" class="btn">Get My Report Now →</a>
+            <div class="guarantee">
+                <div class="guarantee-title">🛡️ No-BS Guarantee</div>
+                <p>If this doesn't give you at least 3 things you can actually USE, email me within 7 days and I'll refund you. Seriously. No awkward conversations, no fine print.</p>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h2>💬 Real Feedback From Local Business Owners</h2>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"I'll be honest—I thought this was going to be some hippie nonsense. But the numbers don't lie. My business has a 4 expression, which explained why I was working my ass off but feeling stuck. The report told me exactly what to do differently. 3 new major clients later and revenue is up 25%. Wish I'd done this years ago."</p>
+                <p class="testimonial-author">— Marco P., Kelowna Construction</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"We opened on the date in the report and broke our first-month revenue record. I'm not a 'believe in this stuff' person but honestly? The name analysis helped us rebrand from Summit Realty to something that actually fits who we are. Huge difference."</p>
+                <p class="testimonial-author">— Jennifer K., Summit Realty Group</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"My wife made me do this. I was the skeptic. But the partnership section? Spot on. We hired a creative director whose numbers balance ours and our brand has never been stronger. Fine, she was right."</p>
+                <p class="testimonial-author">— David L., Lake Country Marketing</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>❓ Quick Questions</h2>
+            
+            <div class="faq-item">
+                <p class="faq-question">How fast do I get this?</p>
+                <p class="faq-answer">PDF hits your inbox the second you purchase. I'll also follow up within 24 hours with a quick summary and next steps.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-question">What do you need from me?</p>
+                <p class="faq-answer">Just your business name (the official one), your name, and what industry you're in. That's it.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-question">My business has been around for years—is this still useful?</p>
+                <p class="faq-answer">Absolutely. Rebranding, expanding, hiring, or just wondering "what if?"—the numbers help with all of it.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-question">What if my numbers seem bad?</p>
+                <p class="faq-answer">There's no such thing as bad numbers—just challenges and strengths. The report shows you exactly how to work WITH what you've got.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-question">Why only $19?</p>
+                <p class="faq-answer">This is me proving value to the local business community. If you love it, we can talk about deeper work together.</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>🚀 Let's See What Your Numbers Say</h2>
+            <p>You've put in the work. Let's make sure the universe is on your side.</p>
+            <a href="https://octaveai.gumroad.com/l/sdslfl" class="btn">Get My Report — $19</a>
+            
+            <div class="mission">
+                <p class="mission-text">🌟 Every sale helps fund solutions to homelessness in Kelowna. When your business wins, our community wins.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Octave | 1241650 BC Ltd.</p>
+        <p>Kelowna, British Columbia</p>
+    </div>
+</body>
+</html>
